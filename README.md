@@ -69,3 +69,5 @@ Official references: [GitHub Pages workflows](https://docs.github.com/en/pages/g
 ## Content basis
 
 Product descriptions were checked against the local TASC overview and technical documentation on 5 October 2026. The site describes active development and supported capabilities without claiming NASA adoption, mission qualification, or independently established performance superiority. No software download, public TASC source release, or contact address is implied.
+
+The AI example at `#ai-example` uses saved renders from TASC's `output/self-interpreted-cad` example dated 9 September 2026. Its saved mesh statistics are 23 components, 3,077 nodes, and 3,720 panels. The image-derived CAD artifact records provisional charging assignments and `solverInputApproved: false`; this example does not show a charging simulation. The displayed request is illustrative wording, not a recovered conversation transcript. Only the two rendered images are published, not the source reference image or model files.

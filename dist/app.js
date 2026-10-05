@@ -109,5 +109,22 @@
       document.querySelector('#product-caption').textContent = view.caption;
     });
   });
+  const aiViews = {
+    mesh: { src: './assets/tasc-ai-lander-mesh.png', width: 1440, height: 1728, alt: 'TASC-generated surface mesh of a conceptual lander, with a tapered upper body, circular platforms, supports, and landing feet.', caption: 'Saved TASC output · Conceptual lander surface mesh · September 2026' },
+    concept: { src: './assets/tasc-ai-lander-concept.png', width: 1000, height: 1100, alt: 'Wireframe view of the AI-interpreted lander concept compiled by TASC, showing rounded bodies, platforms, supports, and landing feet.', caption: 'Saved TASC output · Wireframe view of the conceptual geometry · September 2026' }
+  };
+  document.querySelectorAll('[data-ai-view]').forEach(button => {
+    button.addEventListener('click', () => {
+      const view = aiViews[button.dataset.aiView];
+      document.querySelectorAll('[data-ai-view]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      const img = document.querySelector('#ai-image');
+      img.src = view.src;
+      img.alt = view.alt;
+      img.width = view.width;
+      img.height = view.height;
+      document.querySelector('#ai-image-link').href = view.src;
+      document.querySelector('#ai-caption').textContent = view.caption;
+    });
+  });
   scheduleDraw();
 })();
