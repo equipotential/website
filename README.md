@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC and TASC, its scientific desktop software for spacecraft charging and electrostatic analysis.
+The public website for Equipotential Lab LLC and TASC, its AI-driven spacecraft charging app.
 
 ## Preview locally
 
@@ -73,3 +73,5 @@ Product descriptions were checked against the local TASC overview and technical 
 The AI example at `#ai-example` uses saved renders from TASC's `output/self-interpreted-cad` example dated 9 September 2026. Its saved mesh statistics are 23 components, 3,077 nodes, and 3,720 panels. The image-derived CAD artifact records provisional charging assignments and `solverInputApproved: false`; this example does not show a charging simulation. The displayed request is illustrative wording, not a recovered conversation transcript. Only rendered images are published, not the source reference image or model files.
 
 `dist/assets/tasc-ai-chat.png` was captured on 5 October 2026 from the actual TASC desktop application's AI Object Builder controls using the existing local application binaries. It shows the saved lander mesh, TASC's default greeting, and an unsent example prompt. No AI request or solver run was performed for the screenshot; it is not a transcript of the lander's generation.
+
+The product positioning describes TASC as designed for rapid spacecraft charging analysis and to save months of engineering work. This states the product goal rather than a measured time-saving benchmark.
