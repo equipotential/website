@@ -34,6 +34,9 @@ The contour diagram illustrates two ideal point charges in normalized units. It 
 
 ## GitHub Pages
 
+Repository: [equipotential/website](https://github.com/equipotential/website).
+The default Pages address, once hosting is enabled, is <https://equipotential.github.io/website/>.
+
 1. Store this repository on GitHub with `main` as its default branch.
 2. Under **Settings → Pages → Build and deployment**, select **GitHub Actions**.
 3. Push to `main` or run **Deploy website to GitHub Pages** from the Actions tab.
@@ -55,7 +58,7 @@ GitHub stores and hosts the site; GoDaddy can continue to manage the domain.
    | A | @ | 185.199.109.153 |
    | A | @ | 185.199.110.153 |
    | A | @ | 185.199.111.153 |
-   | CNAME | www | tevolollc.github.io |
+   | CNAME | www | equipotential.github.io |
 
 4. After GitHub's DNS check and certificate provisioning finish, enable **Enforce HTTPS** in Pages settings. DNS propagation can take up to 24 hours.
 
