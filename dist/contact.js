@@ -1,6 +1,4 @@
 const inquiryForm = document.getElementById('inquiry-form');
-const previewButton = document.getElementById('preview-submit');
-const formStatus = document.getElementById('form-status');
 const inquiryType = document.getElementById('inquiry-type');
 const interest = document.getElementById('interest');
 const message = document.getElementById('message');
@@ -46,13 +44,7 @@ inquiryType.addEventListener('change', () => {
   document.getElementById('interest-field').hidden = type !== 'engineering';
   interest.disabled = type !== 'engineering';
   interest.required = type === 'engineering';
-  formStatus.hidden = true;
 });
 
-// This form preview deliberately has no endpoint and makes no network requests.
+// Keep submissions disabled until the receiving endpoint is configured.
 inquiryForm.addEventListener('submit', (event) => event.preventDefault());
-previewButton.addEventListener('click', () => {
-  if (!inquiryForm.reportValidity()) return;
-  formStatus.textContent = 'The form preview is complete. Nothing was sent or saved. Once the contact form is connected, this is where your inquiry will be submitted.';
-  formStatus.hidden = false;
-});
