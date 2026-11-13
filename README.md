@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, and Space Domain are active. The lab, contact, and exploration controls remain disabled for now.
+The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, Space Domain, and The lab are active. Contact and exploration controls remain disabled.
 
 ## Preview locally
 
@@ -14,6 +14,7 @@ Open <http://localhost:4173>. No package installation or build is needed.
 
 ## Edit
 
+- `dist/lab.html` and `dist/lab.css`: Lab page covering AI-accelerated CAD and multidisciplinary analysis. The timeline comparison is illustrative potential, not a measured benchmark.
 - `dist/index.html`: public content and page structure.
 - `dist/home.css`: shared branding, homepage layout, workflow diagram styling, and responsive design.
 - `dist/design-modeling.html` and `dist/design-modeling.css`: Design & Modeling page with the supplied TASC gearbox CAD screenshot.
