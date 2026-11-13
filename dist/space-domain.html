@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f2">
+  <meta name="description" content="Explore space engineering workflows inside TASC, from spacecraft geometry and mesh inspection to AI conversations about lunar surface charging.">
+  <meta property="og:title" content="Space Domain — Equipotential Lab">
+  <meta property="og:description" content="Space engineering workflows inside TASC: spacecraft mesh preparation and AI-assisted exploration of charging topics.">
+  <meta property="og:type" content="website">
+  <title>Space Domain — Equipotential Lab</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="./design-modeling.css">
+  <link rel="stylesheet" href="./space-domain.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Equipotential Lab home"><img src="./assets/brand/logo.svg" alt="Equipotential Lab" width="470" height="88"></a>
+      <nav aria-label="Main navigation">
+        <a href="./">Home</a>
+        <a href="./design-modeling.html">Design &amp; Modeling</a>
+        <a class="nav-home" href="./space-domain.html" aria-current="page">Space Domain</a>
+        <button type="button" disabled>The lab</button>
+        <button class="primary contact" type="button" disabled>Talk to us</button>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="modeling-intro" aria-labelledby="space-title">
+        <p class="eyebrow">SPACE DOMAIN</p>
+        <div class="intro-grid">
+          <h1 id="space-title">Engineering tools for the space environment.</h1>
+          <p class="intro-copy">Explore spacecraft geometry, prepare meshes, and bring space engineering questions into the AI conversation inside TASC.</p>
+        </div>
+      </section>
+      <section class="modeling-example" aria-labelledby="mesh-title">
+        <div class="example-heading"><div><p class="eyebrow">01 / GEOMETRY &amp; MESH</p><h2 id="mesh-title">Inspect the spacecraft and its surrounding mesh.</h2></div><span class="development-label">Development interface</span></div>
+        <figure>
+          <a class="screenshot-link" href="./assets/tasc-space-mesh.png" target="_blank" rel="noopener" aria-label="Open full-size TASC spacecraft and mesh screenshot">
+            <img src="./assets/tasc-space-mesh.png" alt="TASC Object Builder showing a cyan exterior volume mesh above a spacecraft surface mesh with solar cells and a material legend. Controls include outer boundary, cut volume, and cut depth." width="3204" height="1828">
+          </a>
+          <figcaption><span>Inside TASC · Gmsh volume mesh and spacecraft surface mesh</span><a href="./assets/tasc-space-mesh.png" target="_blank" rel="noopener">Open full-size image ↗</a></figcaption>
+        </figure>
+        <div class="example-detail"><h2>Review geometry before charging analysis.</h2><p>This example shows the exterior tetrahedral mesh and the spacecraft surface mesh in one workspace. Boundary and cut-volume controls help inspect the surrounding mesh, while the material legend identifies aluminum, Kapton, and solar cells. The view shows mesh preparation rather than a charging result.</p></div>
+      </section>
+      <section class="chat-example" aria-labelledby="chat-title">
+        <div class="chat-copy">
+          <p class="eyebrow">02 / SPACE ENGINEERING CONVERSATION</p>
+          <h2 id="chat-title">Start with a question about lunar surface charging.</h2>
+          <p class="chat-prompt">“explain lunar surface charging”</p>
+          <p>The second example shows a question entered in TASC’s AI chat. The reply outlines the topics to cover: mechanisms, typical potentials, effects on dust and hardware, hazards, and mitigations.</p>
+          <p class="chat-note">The screenshot captures the start of the conversation and its response outline.</p>
+        </div>
+        <figure>
+          <a class="screenshot-link" href="./assets/tasc-lunar-charging-chat.png" target="_blank" rel="noopener" aria-label="Open full-size TASC lunar surface charging chat screenshot">
+            <img src="./assets/tasc-lunar-charging-chat.png" alt="TASC AI chat with the user question ‘explain lunar surface charging’ and a reply outlining mechanisms, typical potentials, effects on dust and hardware, hazards, and mitigations." width="896" height="1514" loading="lazy">
+          </a>
+          <figcaption><span>Inside TASC · Lunar surface charging question</span><a href="./assets/tasc-lunar-charging-chat.png" target="_blank" rel="noopener">Open full-size image ↗</a></figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer>© 2026 Equipotential Lab LLC</footer>
+  </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home and Design & Modeling are active. Space Domain, The lab, contact, and exploration controls remain disabled for now.
+The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, and Space Domain are active. The lab, contact, and exploration controls remain disabled for now.
 
 ## Preview locally
 
@@ -17,6 +17,8 @@ Open <http://localhost:4173>. No package installation or build is needed.
 - `dist/index.html`: public content and page structure.
 - `dist/home.css`: shared branding, homepage layout, workflow diagram styling, and responsive design.
 - `dist/design-modeling.html` and `dist/design-modeling.css`: Design & Modeling page with the supplied TASC gearbox CAD screenshot.
+- `dist/space-domain.html` and `dist/space-domain.css`: Space Domain page with the two supplied TASC examples: mesh inspection and a lunar surface charging chat.
+- `dist/assets/tasc-space-mesh.png` and `dist/assets/tasc-lunar-charging-chat.png`: original screenshots supplied on 13 November 2026. The mesh screenshot shows geometry and mesh preparation, not a charging result. The chat screenshot shows a question and response outline, not a completed technical explanation.
 - `dist/assets/tasc-gearbox-cad.png`: actual TASC development screenshot supplied on 13 November 2026; it shows a CAD example, not a charging analysis result.
 - `dist/styles.css`: retained styles for the earlier TASC-focused page.
 - `dist/app.js`: retained earlier TASC interactions; not loaded by the current homepage.
