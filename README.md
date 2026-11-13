@@ -17,8 +17,8 @@ Open <http://localhost:4173>. No package installation or build is needed.
 - `dist/index.html`: public content and page structure.
 - `dist/home.css`: shared branding, homepage layout, workflow diagram styling, and responsive design.
 - `dist/design-modeling.html` and `dist/design-modeling.css`: Design & Modeling page with the supplied TASC gearbox CAD screenshot.
-- `dist/space-domain.html` and `dist/space-domain.css`: Space Domain page with the two supplied TASC examples: mesh inspection and a lunar surface charging chat.
-- `dist/assets/tasc-space-mesh.png` and `dist/assets/tasc-lunar-charging-chat.png`: original screenshots supplied on 13 November 2026. The mesh screenshot shows geometry and mesh preparation, not a charging result. The chat screenshot shows a question and response outline, not a completed technical explanation.
+- `dist/space-domain.html` and `dist/space-domain.css`: Space Domain page with the two November 13 TASC examples: AI-assisted lander modeling and 3D charging results.
+- `dist/assets/tasc-lander-model-2026-11-13.png` and `dist/assets/tasc-charging-results-2026-11-13.png`: November 13 screenshots supplied by the user, replacing the earlier mesh and lunar chat examples. The lander image shows the model and AI conversation; the results image shows surface potential at 1,000 seconds with a potential summary and the TASC AI menu open.
 - `dist/assets/tasc-gearbox-cad.png`: actual TASC development screenshot supplied on 13 November 2026; it shows a CAD example, not a charging analysis result.
 - `dist/styles.css`: retained styles for the earlier TASC-focused page.
 - `dist/app.js`: retained earlier TASC interactions; not loaded by the current homepage.
