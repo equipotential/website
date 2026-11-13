@@ -36,7 +36,11 @@
         <div class="form-panel">
           <div class="form-heading"><h2>Start a conversation.</h2></div>
           <p class="form-intro">A few details to get us started. <span>Fields marked * are required.</span></p>
-          <form id="inquiry-form" aria-describedby="availability-note" onsubmit="return false">
+          <form id="inquiry-form" action="https://api.web3forms.com/submit" method="POST" aria-describedby="delivery-note">
+            <input type="hidden" name="access_key" value="b8afde6a-f22a-48be-928c-c879fa507dd4">
+            <input type="hidden" name="subject" value="Equipotential Lab — new website inquiry">
+            <input type="hidden" name="from_name" value="Equipotential Lab website">
+            <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
             <div class="field"><label for="inquiry-type">What brings you here? <span aria-hidden="true">*</span></label><select id="inquiry-type" name="inquiry_type" required aria-describedby="inquiry-help"><option value="engineering" selected>Engineering / product inquiry</option><option value="partnership">Partnership inquiry</option><option value="investor">Investor inquiry</option></select><p class="field-help inquiry-help" id="inquiry-help" aria-live="polite">Tell us about a workflow, product question, or engineering challenge.</p></div>
             <div class="field-row">
               <div class="field"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></div>
@@ -46,13 +50,16 @@
             <div class="field" id="interest-field"><label for="interest">Area of interest <span aria-hidden="true">*</span></label><select id="interest" name="interest" required><option value="" disabled selected>Select an area</option><option>CAD &amp; model development</option><option>Thermal</option><option>Fluid dynamics</option><option>EMI / EMC</option><option>Spacecraft charging</option><option>Radiation</option><option>Multiple disciplines</option><option>Other / exploring possibilities</option></select></div>
             <div class="field"><label for="message"><span id="message-label">What would you like to improve?</span> <span aria-hidden="true">*</span></label><p class="field-help" id="message-help">Share your current workflow, the challenge, and what a better outcome would look like.</p><textarea id="message" name="message" rows="5" required maxlength="5000" aria-describedby="message-help" placeholder="Tell us a little about your engineering challenge…"></textarea></div>
             <p class="confidential-note">Please avoid including confidential or sensitive project information.</p>
-            <button class="primary submit-button" type="button" id="submit-inquiry" disabled>Available soon</button>
-            <p class="availability-note" id="availability-note">Online inquiries will open soon. Please check back shortly.</p>
+            <div class="captcha-container"><div class="h-captcha" data-captcha="true" data-size="compact"></div></div>
+            <button class="primary submit-button" type="submit" id="submit-inquiry">Start a conversation <span aria-hidden="true">↗</span></button>
+            <p class="delivery-note" id="delivery-note">Your inquiry is processed by Web3Forms and delivered to Equipotential Lab. <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Privacy policy ↗</a></p>
+            <p id="form-status" class="form-status" role="status" tabindex="-1" hidden></p>
           </form>
         </div>
       </section>
     </main>
     <footer>© 2026 Equipotential Lab LLC</footer>
   </div>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

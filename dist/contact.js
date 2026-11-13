@@ -30,7 +30,7 @@ const inquiryPrompts = {
   },
 };
 
-inquiryType.addEventListener('change', () => {
+function updateInquiryFields() {
   const type = inquiryType.value;
   const prompts = inquiryPrompts[type];
   document.getElementById('inquiry-help').textContent = prompts.help;
@@ -44,7 +44,63 @@ inquiryType.addEventListener('change', () => {
   document.getElementById('interest-field').hidden = type !== 'engineering';
   interest.disabled = type !== 'engineering';
   interest.required = type === 'engineering';
-});
+}
+inquiryType.addEventListener('change', updateInquiryFields);
+updateInquiryFields();
 
-// Keep submissions disabled until the receiving endpoint is configured.
-inquiryForm.addEventListener('submit', (event) => event.preventDefault());
+
+const submitButton = document.getElementById('submit-inquiry');
+const formStatus = document.getElementById('form-status');
+let sending = false;
+
+function showStatus(text, isError = false) {
+  formStatus.textContent = text;
+  formStatus.classList.toggle('is-error', isError);
+  formStatus.hidden = false;
+  formStatus.focus();
+}
+
+inquiryForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (sending || !inquiryForm.reportValidity()) return;
+  const captchaToken = inquiryForm.querySelector('[name="h-captcha-response"]')?.value;
+  if (!captchaToken) {
+    showStatus('Please complete the CAPTCHA before sending. If it hasn’t loaded, refresh the page or check whether your browser is blocking it.', true);
+    return;
+  }
+  const formData = new FormData(inquiryForm);
+  if (formData.get('botcheck')) return;
+  formData.set('subject', `Equipotential Lab — ${inquiryType.selectedOptions[0].textContent}`);
+  sending = true;
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending…';
+  inquiryForm.setAttribute('aria-busy', 'true');
+  formStatus.hidden = true;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch(inquiryForm.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.fromEntries(formData)),
+      signal: controller.signal,
+    });
+    const result = await response.json();
+    if (!response.ok || !result.success) {
+      showStatus('Your inquiry was not accepted. Please check the CAPTCHA and try again. Your entries have been kept.', true);
+      return;
+    }
+    inquiryForm.reset();
+    updateInquiryFields();
+    showStatus('Thank you—your inquiry has been submitted to Equipotential Lab.');
+  } catch {
+    showStatus('We couldn’t confirm that your inquiry was delivered. Your entries have been kept. Please check your connection before trying again.', true);
+  } finally {
+    clearTimeout(timeout);
+    sending = false;
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Start a conversation <span aria-hidden="true">↗</span>';
+    inquiryForm.removeAttribute('aria-busy');
+    if (window.hcaptcha) window.hcaptcha.reset();
+  }
+});

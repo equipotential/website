@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, Space Domain, and The lab are active. Talk to us is available with submissions disabled until Formspree is connected; exploration controls remain disabled.
+The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, Space Domain, and The lab are active. Talk to us uses Web3Forms for submissions; exploration controls remain disabled.
 
 ## Preview locally
 
@@ -14,7 +14,7 @@ Open <http://localhost:4173>. No package installation or build is needed.
 
 ## Edit
 
-- `dist/contact.html`, `dist/contact.css`, and `dist/contact.js`: Talk to us page with engineering, partnership, and investor inquiry paths and contextual prompts. The submit button shows Available soon and remains disabled; no input is sent or stored. Connect a verified Formspree endpoint and configure spam protection before enabling real submissions.
+- `dist/contact.html`, `dist/contact.css`, and `dist/contact.js`: Talk to us page with engineering, partnership, and investor inquiry paths and contextual prompts. Submissions use Web3Forms with a public access key, honeypot, and hCaptcha. Enable hCaptcha in the Web3Forms form dashboard to enforce it on the server. The form displays success only after API confirmation, preserves entries on failure, and prevents concurrent submissions. No account credentials are included in the website.
 - `dist/lab.html` and `dist/lab.css`: Lab page covering AI-accelerated CAD and multidisciplinary analysis. The timeline comparison is illustrative potential, not a measured benchmark.
 - `dist/index.html`: public content and page structure.
 - `dist/home.css`: shared branding, homepage layout, workflow diagram styling, and responsive design.
