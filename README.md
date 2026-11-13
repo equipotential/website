@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC and TASC, its AI-driven spacecraft charging app.
+The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Navigation to future pages, contact, and exploration controls are intentionally disabled for now; Home remains active.
 
 ## Preview locally
 
@@ -15,8 +15,9 @@ Open <http://localhost:4173>. No package installation or build is needed.
 ## Edit
 
 - `dist/index.html`: public content and page structure.
-- `dist/styles.css`: responsive layout and visual styling.
-- `dist/app.js`: illustrative potential contours and application screenshot selector.
+- `dist/home.css`: current homepage layout, workflow diagram styling, and responsive design.
+- `dist/styles.css`: retained styles for the earlier TASC-focused page.
+- `dist/app.js`: retained earlier TASC interactions; not loaded by the current homepage.
 - `dist/assets/`: application screenshots selected from the TASC workspace.
 
 ## Company logo
