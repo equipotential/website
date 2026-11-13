@@ -1,6 +1,6 @@
 # Equipotential Lab website
 
-The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, Space Domain, and The lab are active. Talk to us uses Web3Forms for submissions; exploration controls remain disabled.
+The public website for Equipotential Lab LLC. The homepage introduces AI tools that accelerate engineering workflows, with Design & Modeling and Space Domain as focus areas. Home, Design & Modeling, Space Domain, and The lab are active. Talk to us uses Web3Forms for submissions.
 
 ## Preview locally
 
