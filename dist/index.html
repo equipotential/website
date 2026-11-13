@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f6f2">
-  <meta name="description" content="We build AI tools that accelerate engineering workflows. Automate repetitive work, connect engineering knowledge, and give engineers more time to solve hard problems.">
+  <meta name="description" content="AI-assisted CAD model development and engineering analysis, with engineers guiding the workflow and reviewing results.">
   <meta property="og:title" content="Equipotential Lab — AI tools for engineering workflows">
   <meta property="og:description" content="We build AI tools that accelerate engineering workflows.">
   <meta property="og:type" content="website">
   <title>Equipotential Lab — AI tools for engineering workflows</title>
   <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
-  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="./home.css?v=20261113-ai">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,18 +38,20 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <h1 id="hero-title">We build AI tools that accelerate engineering workflows.</h1>
-          <p>Automate repetitive work. Connect engineering knowledge. Give engineers more time to solve hard problems.</p>
         </div>
-        <svg class="workflow" viewBox="0 0 720 390" role="img" aria-labelledby="workflow-title workflow-description">
-          <title id="workflow-title">Connected engineering workflows</title>
-          <desc id="workflow-description">Knowledge connects to tools, tools connect to analysis, and analysis connects to decisions.</desc>
-          <g class="connections"><path d="M294 76h34c52 0 40 42 109 42"/><path d="M437 118c-70 0-44 57-122 57H125c-125 0-124 121-51 121"/><path d="M335 296h94"/></g>
-          <g class="workflow-card"><rect x="4" y="26" width="290" height="100" rx="16"/><rect x="437" y="68" width="278" height="100" rx="16"/><rect x="74" y="246" width="261" height="100" rx="16"/><rect x="429" y="246" width="286" height="100" rx="16"/></g>
-          <g class="icon-tile"><rect x="25" y="47" width="60" height="60" rx="15"/><rect x="458" y="89" width="60" height="60" rx="15"/><rect x="95" y="267" width="60" height="60" rx="15"/><rect x="450" y="267" width="60" height="60" rx="15"/></g>
-          <g class="diagram-icons"><use href="#layers" x="39" y="58" width="32" height="32"/><use href="#tools" x="472" y="103" width="32" height="32"/><use href="#chart" x="109" y="281" width="32" height="32"/><use href="#check" x="464" y="281" width="32" height="32"/></g>
-          <g class="diagram-labels"><text x="104" y="85">Knowledge</text><text x="538" y="127">Tools</text><text x="174" y="305">Analysis</text><text x="530" y="305">Decisions</text></g>
-          <g class="connection-dots"><circle cx="294" cy="76" r="7"/><circle cx="437" cy="118" r="7"/><circle cx="74" cy="296" r="7"/><circle cx="429" cy="296" r="7"/></g>
-        </svg>
+        <figure class="ai-workflow" aria-labelledby="workflow-caption">
+          <figcaption id="workflow-caption">AI INSIDE THE ENGINEERING WORKFLOW</figcaption>
+          <div class="workflow-input"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#layers"/></svg><div><strong>Your intent &amp; knowledge</strong><p>Requirements, constraints, engineering context</p></div></div>
+          <span class="flow-arrow" aria-hidden="true">↓</span>
+          <div class="ai-node"><span class="ai-monogram" aria-hidden="true">AI</span><div><strong>AI assistance</strong><p>Translate intent into actions in engineering tools</p></div></div>
+          <span class="flow-arrow" aria-hidden="true">↓</span>
+          <div class="workflow-tools">
+            <div class="workflow-tool"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#tools"/></svg><strong>CAD &amp; modeling</strong><p>Create and refine geometry</p></div>
+            <div class="workflow-tool"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#chart"/></svg><strong>Simulation &amp; analysis</strong><p>Prepare studies and interpret results</p></div>
+          </div>
+          <span class="flow-arrow" aria-hidden="true">↓</span>
+          <div class="workflow-review"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#check"/></svg><div><strong>Engineer review &amp; decisions</strong><p>Check assumptions, evaluate results, guide the next step</p></div></div>
+        </figure>
       </section>
       <section class="benefits" aria-label="How we accelerate engineering workflows">
         <article><span class="feature-icon"><svg aria-hidden="true"><use href="#bolt"/></svg></span><div><h2>Automate</h2><p>Turn manual, repetitive tasks into reliable, AI-powered workflows.</p></div></article>
